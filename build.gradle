@@ -24,3 +24,10 @@ tasks.register('count') {
         4.times { print "$it " }
     }
 }
+
+tasks.register('intro') {
+    dependsOn tasks.hello
+    doLast {
+        println "I'm Gradle"
+    }
+}
