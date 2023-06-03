@@ -10,3 +10,11 @@ tasks.register('hello') {
         println 'Hello world!'
     }
 }
+
+tasks.register('upper') {
+    doLast {
+        String someString = 'mY_nAmE'
+        println "Original: $someString"
+        println "Upper case: ${someString.toUpperCase()}"
+    }
+}
