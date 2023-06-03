@@ -11,6 +11,22 @@ tasks.register('hello') {
     }
 }
 
+tasks.named('hello') {
+    doFirst {
+        println 'Hello Venus'
+    }
+}
+tasks.named('hello') {
+    doLast {
+        println 'Hello Mars'
+    }
+}
+tasks.named('hello') {
+    doLast {
+        println 'Hello Jupiter'
+    }
+}
+
 tasks.register('upper') {
     doLast {
         String someString = 'mY_nAmE'
